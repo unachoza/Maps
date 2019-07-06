@@ -85111,7 +85111,9 @@ var User =
 /** @class */
 function () {
   function User() {
-    this.name = faker_1["default"].name.firstName();
+    this.firstName = faker_1["default"].name.firstName();
+    this.lastName = faker_1["default"].name.lastName();
+    this.title = faker_1["default"].name.prefix();
     this.location = {
       lat: parseFloat(faker_1["default"].address.latitude()),
       lng: parseFloat(faker_1["default"].address.longitude())
@@ -85119,7 +85121,7 @@ function () {
   }
 
   User.prototype.markerContent = function () {
-    return "<div> User Name: " + this.name + "</div>";
+    return "<div> User Name: " + this.title + "  " + this.firstName + " " + this.lastName + "</div>";
   };
 
   return User;
@@ -85215,7 +85217,7 @@ var company = new Company_1.Company();
 var customMap = new CustomMap_1.CustomMap('map');
 customMap.addMarker(user);
 customMap.addMarker(company);
-},{"./User":"src/User.ts","./Company":"src/Company.ts","./CustomMap":"src/CustomMap.ts"}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./User":"src/User.ts","./Company":"src/Company.ts","./CustomMap":"src/CustomMap.ts"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -85243,7 +85245,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59624" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61925" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -85418,5 +85420,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.ts"], null)
+},{}]},{},["../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.ts"], null)
 //# sourceMappingURL=/src.f10117fe.js.map

@@ -1,14 +1,18 @@
 import faker from "faker";
 
 export class User {
-  name: string;
+  firstName: string;
+  lastName: string;
+  title: string
   location: {
     lat: number;
     lng: number;
   };
 
   constructor() {
-    this.name = faker.name.firstName();
+    this.firstName = faker.name.firstName();
+    this.lastName = faker.name.lastName()
+    this.title = faker.name.prefix()
     this.location = {
       lat: parseFloat(faker.address.latitude()),
       lng: parseFloat(faker.address.longitude())
@@ -16,6 +20,6 @@ export class User {
   }
 
   markerContent(): string {
-    return `<div> User Name: ${this.name}</div>`;
+    return `<div> User Name: ${this.title}  ${this.firstName} ${this.lastName}</div>`;
   }
 }
