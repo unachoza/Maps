@@ -85154,7 +85154,7 @@ function () {
   }
 
   Company.prototype.markerContent = function () {
-    return "\n     <div>\n      <h1>Company Name: " + this.companyName + "</h1>\n      <h3>CatchPhrase: " + this.catchPhras + "</h3>\n    </div>\n    ";
+    return "\n     <div>\n      <div><strong>Company Name:</strong> " + this.companyName + "</div>\n      <div><strong>CatchPhrase:</strong> " + this.catchPhras + "</div>\n    </div>\n    ";
   };
 
   return Company;
