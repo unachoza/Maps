@@ -6,6 +6,6 @@
     "@types/faker": "^4.1.5",
     "@types/googlemaps": "^3.36.5",
     "faker": "^4.1.0",
-    "parcel": "^1.12.3"
+    "parcel": "^2.8.2"
   }
 }
